@@ -10,7 +10,6 @@ RUN set -ex \
   ; apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 RUN set -ex \
-  # /opt/cargo/registry/index/github.com-*/.cargo-index-lock
   ; curl https://sh.rustup.rs -sSf \
     | sh -s -- --default-toolchain stable -y \
   ; rustup component add rls rust-analysis rust-src clippy rustfmt \
