@@ -1,6 +1,6 @@
 FROM nnurphy/deb
 
-ENV CARGO_HOME=/opt/cargo RUSTUP_HOME=/opt/rustup RUST_VERSION=1.38.0
+ENV CARGO_HOME=/opt/cargo RUSTUP_HOME=/opt/rustup RUST_VERSION=1.39.0
 ENV PATH=${CARGO_HOME}/bin:$PATH
 
 RUN set -ex \
