@@ -7,12 +7,14 @@ RUN set -ex \
   ; apt-get update \
   ; apt-get install -y --no-install-recommends \
     pkg-config libssl-dev lldb libxml2 \
+    musl musl-dev musl-tools \
   ; apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 RUN set -ex \
   ; curl https://sh.rustup.rs -sSf \
     | sh -s -- --default-toolchain stable -y \
   ; rustup component add rls rust-analysis rust-src clippy rustfmt \
+  ; rustup target add x86_64-unknown-linux-musl \
   # gluon_language-server mdbook
   ; cargo install wasm-pack \
   #; cargo install -q iron actix actix-web may reqwest \
