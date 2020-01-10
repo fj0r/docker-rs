@@ -21,7 +21,7 @@ RUN set -ex \
   ; rustup target add x86_64-unknown-linux-musl \
   # gluon_language-server mdbook
   ; cargo install cargo-wasi wasm-pack \
-    ; USER=root \
+    ; export USER=root \
     ; cargo new hello-world \
     ; cd hello-world \
     ; cargo wasi run \
