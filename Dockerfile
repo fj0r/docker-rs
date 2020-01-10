@@ -12,7 +12,7 @@ RUN set -ex \
 
 ARG wasmtime_url=https://github.com/bytecodealliance/wasmtime/releases/download/dev/wasmtime-dev-x86_64-linux.tar.xz
 RUN set -ex \
-  ; curl ${wasmtime_url} | tar Jxf - --strip-components=1 -C /usr/local/bin \
+  ; wget -O- ${wasmtime_url} | tar Jxf - --strip-components=1 -C /usr/local/bin \
         wasmtime-dev-x86_64-linux/wasm2obj \
         wasmtime-dev-x86_64-linux/wasmtime \
   ; curl https://sh.rustup.rs -sSf \
