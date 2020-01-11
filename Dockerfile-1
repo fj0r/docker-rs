@@ -1,0 +1,10 @@
+FROM nnurphy/rs
+
+RUN set -ex \
+  ; export USER=root \
+  ; cargo new hello-world \
+  ; cd hello-world \
+  ; cargo wasi build --release \
+  ; cd .. \
+  ; rm -rf hello-world \
+  ; rm -rf ${CARGO_HOME}/registry/src/*

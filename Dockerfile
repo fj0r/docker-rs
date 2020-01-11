@@ -26,10 +26,10 @@ RUN set -ex \
   #  ; config chrono lru-cache itertools \
   ; rm -rf ${CARGO_HOME}/registry/src/*
 
-#RUN set -ex \
-#  ; export USER=root \
-#  ; cargo new hello-world \
-#  ; cd hello-world \
-#  ; cargo wasi run \
-#  ; popd \
-#  ; rm -rf hello-world
+RUN set -ex \
+  ; export USER=root \
+  ; cargo new hello-world \
+  ; cd hello-world \
+  ; cargo wasi build --release \
+  ; cd .. \
+  ; rm -rf hello-world
