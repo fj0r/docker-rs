@@ -21,13 +21,15 @@ RUN set -ex \
   ; rustup target add x86_64-unknown-linux-musl \
   # gluon_language-server mdbook
   ; cargo install cargo-wasi wasm-pack \
-    ; export USER=root \
-    ; cargo new hello-world \
-    ; cd hello-world \
-    ; cargo wasi run \
-    ; popd \
-    ; rm -rf hello-world \
   #; cargo install -q iron actix actix-web may reqwest \
   #  ; serde serde_yaml serde_json rlua clap nom handlebars \
   #  ; config chrono lru-cache itertools \
   ; rm -rf ${CARGO_HOME}/registry/src/*
+
+#RUN set -ex \
+#  ; export USER=root \
+#  ; cargo new hello-world \
+#  ; cd hello-world \
+#  ; cargo wasi run \
+#  ; popd \
+#  ; rm -rf hello-world
