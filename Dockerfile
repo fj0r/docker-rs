@@ -18,7 +18,7 @@ RUN set -ex \
   # gluon_language-server mdbook
   ; cargo install cargo-wasi wasm-pack cargo-prefetch \
   ; cargo prefetch serde serde_yaml serde_json \
-      clap reqwest config chrono lru-cache itertools nom handlebars \
+      structopt reqwest config chrono lru-cache itertools nom handlebars \
   #; cargo install -q iron actix actix-web may reqwest \
   #  ; serde serde_yaml serde_json rlua clap nom handlebars \
   #  ; config chrono lru-cache itertools \
