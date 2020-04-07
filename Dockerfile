@@ -15,6 +15,7 @@ RUN set -ex \
     | sh -s -- --default-toolchain stable -y \
   ; rustup component add rust-analysis rust-src clippy rustfmt \
   ; rustup target add x86_64-unknown-linux-musl \
+  ; rustup target add wasm32-wasi \
   # gluon_language-server mdbook
   ; cargo install cargo-wasi wasm-pack cargo-prefetch \
   ; cargo prefetch serde serde_yaml serde_json \
