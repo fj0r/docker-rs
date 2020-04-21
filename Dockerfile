@@ -18,7 +18,7 @@ RUN set -ex \
   ; rustup target add wasm32-wasi \
   ; cargo install cargo-wasi wasm-pack cargo-prefetch \
   ; cargo prefetch serde serde_yaml serde_json \
-      structopt actix actix-web nom handlebars \
+      structopt actix actix-web diesel nom handlebars \
       reqwest config chrono lru-cache itertools \
   ; rm -rf ${CARGO_HOME}/registry/src/*
 
