@@ -16,13 +16,10 @@ RUN set -ex \
   ; rustup component add rust-analysis rust-src clippy rustfmt \
   ; rustup target add x86_64-unknown-linux-musl \
   ; rustup target add wasm32-wasi \
-  # gluon_language-server mdbook
   ; cargo install cargo-wasi wasm-pack cargo-prefetch \
   ; cargo prefetch serde serde_yaml serde_json \
-      structopt reqwest config chrono lru-cache itertools nom handlebars \
-  #; cargo install -q iron actix actix-web may reqwest \
-  #  ; serde serde_yaml serde_json rlua clap nom handlebars \
-  #  ; config chrono lru-cache itertools \
+      structopt actix actix-web nom handlebars \
+      reqwest config chrono lru-cache itertools \
   ; rm -rf ${CARGO_HOME}/registry/src/*
 
 RUN set -ex \
