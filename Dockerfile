@@ -1,4 +1,4 @@
-FROM nnurphy/deb
+FROM nnurphy/ub
 
 ENV CARGO_HOME=/opt/cargo RUSTUP_HOME=/opt/rustup RUST_VERSION=1.43.0
 ENV PATH=${CARGO_HOME}/bin:$PATH
