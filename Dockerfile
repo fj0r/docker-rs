@@ -18,6 +18,7 @@ RUN set -ex \
   ; rustup target add x86_64-unknown-linux-musl \
   ; rustup target add wasm32-wasi \
   ; cargo install cargo-wasi wasm-pack cargo-prefetch \
+      systemfd cargo-watch \
   ; cargo prefetch serde serde_yaml serde_json fern \
       reqwest actix actix-web diesel nom handlebars \
       structopt config chrono lru-cache itertools \
