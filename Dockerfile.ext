@@ -1,0 +1,2 @@
+FROM rs
+RUN nvim -c  "execute 'LspInstall' 'bashls'|q"

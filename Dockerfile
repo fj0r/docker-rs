@@ -25,6 +25,11 @@ RUN set -ex \
   ; rm -rf ${CARGO_HOME}/registry/src/*
 
 RUN set -ex \
+  ; curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux \
+        -o /usr/local/bin/rust-analyzer \
+  ; chmod +x /usr/local/bin/rust-analyzer
+
+RUN set -ex \
   ; export USER=root \
   ; cargo new hello-world \
   ; cd hello-world \
