@@ -1,2 +1,9 @@
 FROM rs
-RUN nvim -c  "execute 'LspInstall' 'bashls'|q"
+RUN nvim -u /etc/skel/.config/nvim/init.vim --headless \
+        +'LspInstall tsserver' \
+        +'LspInstall yamlls' \
+        +'LspInstall jsonls' \
+        +qa
+
+RUN mkdir -p /etc/skel/.cache/nvim/lspconfig \
+ && mv /root/.cache/nvim/lspconfig/* /etc/skel/.cache/nvim/lspconfig
