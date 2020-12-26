@@ -25,9 +25,11 @@ RUN set -ex \
   ; rm -rf ${CARGO_HOME}/registry/src/*
 
 RUN set -ex \
+  ; mkdir -p /opt/language-server/rust \
   ; curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux \
-        -o /usr/local/bin/rust-analyzer \
-  ; chmod +x /usr/local/bin/rust-analyzer
+        -o /opt/language-server/rust/rust-analyzer \
+  ; chmod +x /opt/language-server/rust/rust-analyzer \
+  ; ln -fs /opt/language-server/rust/rust-analyzer /usr/local/bin
 
 RUN set -ex \
   ; export USER=root \
