@@ -1,6 +1,5 @@
 FROM nnurphy/ub
 
-ENV RUST_VERSION=1.49.0
 ENV CARGO_HOME=/opt/cargo RUSTUP_HOME=/opt/rustup
 ENV PATH=${CARGO_HOME}/bin:$PATH
 
