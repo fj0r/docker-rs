@@ -1,4 +1,4 @@
-FROM nnurphy/sid
+FROM nnurphy/io
 
 ENV CARGO_HOME=/opt/cargo RUSTUP_HOME=/opt/rustup
 ENV PATH=${CARGO_HOME}/bin:$PATH
