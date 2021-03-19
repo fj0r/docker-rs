@@ -18,8 +18,10 @@ RUN set -ex \
   ; rustup target add wasm32-wasi \
   ; cargo install cargo-wasi wasm-pack cargo-prefetch \
       systemfd cargo-watch cargo-edit cargo-feature \
-  ; cargo prefetch quicli structopt \
+  ; cargo prefetch \
+      quicli structopt \
       actix actix-web \
+      thiserror anyhow \
       serde serde_derive serde_yaml serde_json \
       slog slog-async slog-json slog-term \
       reqwest diesel nom handlebars \
