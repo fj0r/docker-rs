@@ -23,7 +23,7 @@ RUN set -ex \
       actix actix-web \
       thiserror anyhow \
       serde serde_derive serde_yaml serde_json \
-      slog slog-async slog-json slog-term \
+      slog slog-async slog-json slog-term slog-logfmt \
       reqwest oxidizer nom handlebars \
       config chrono lru-cache itertools \
   ; rm -rf ${CARGO_HOME}/registry/src/*
