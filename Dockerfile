@@ -1,4 +1,4 @@
-FROM nashv1/io
+FROM fj0rd/io
 
 ENV CARGO_HOME=/opt/cargo RUSTUP_HOME=/opt/rustup
 ENV PATH=${CARGO_HOME}/bin:$PATH
