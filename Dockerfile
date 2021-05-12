@@ -16,7 +16,8 @@ RUN set -ex \
   ; rustup component add rust-src clippy rustfmt \
   ; rustup target add x86_64-unknown-linux-musl \
   ; rustup target add wasm32-wasi \
-  ; cargo install cargo-wasi wasm-pack cargo-prefetch \
+  ; cargo install tomlq \
+      cargo-wasi wasm-pack cargo-prefetch \
       systemfd cargo-watch cargo-edit cargo-feature \
   ; cargo prefetch \
       quicli structopt \
