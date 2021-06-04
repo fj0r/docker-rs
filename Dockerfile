@@ -17,11 +17,12 @@ RUN set -ex \
   ; rustup target add x86_64-unknown-linux-musl \
   ; rustup target add wasm32-wasi \
   ; cargo install tomlq \
-      cargo-wasi wasm-pack cargo-prefetch \
-      systemfd cargo-watch cargo-edit cargo-feature \
+      cargo-wasi wasm-pack trunk wasm-bindgen-cli \
+      systemfd cargo-watch cargo-edit cargo-feature cargo-prefetch \
   ; cargo prefetch \
       quicli structopt \
       actix actix-web \
+      yew yew-router wasm-bindgen \
       thiserror anyhow \
       serde serde_derive serde_yaml serde_json \
       slog slog-async slog-json slog-term slog-logfmt \
