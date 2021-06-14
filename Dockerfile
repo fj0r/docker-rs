@@ -32,8 +32,9 @@ RUN set -ex \
 
 RUN set -ex \
   ; mkdir -p /opt/language-server/rust \
-  ; curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux \
-        -o /opt/language-server/rust/rust-analyzer \
+  ; ra_version=$(curl -sSL -H "Accept: application/vnd.github.v3+json"  https://api.github.com/repos/rust-analyzer/rust-analyzer/releases | jq -r '.[0].tag_name') \
+  ; curl -sSL https://github.com/rust-analyzer/rust-analyzer/releases/download/${ra_version}/rust-analyzer-x86_64-unknown-linux-gnu.gz \
+      | gzip -d > /opt/language-server/rust/rust-analyzer \
   ; chmod +x /opt/language-server/rust/rust-analyzer \
   ; ln -fs /opt/language-server/rust/rust-analyzer /usr/local/bin
 
